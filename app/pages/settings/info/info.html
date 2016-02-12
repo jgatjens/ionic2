@@ -1,0 +1,24 @@
+<!-- <ion-nav [root]="profilePage"></ion-nav> -->
+
+
+<ion-navbar *navbar>
+  <ion-title>
+    Profile
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class="profile">
+
+  <ion-list>
+     <button ion-item [navPush]="blankPage">
+      Profile & personal info
+    </button>
+    <button ion-item (click)="openPage()">
+      Payment & shipment
+    </button>
+    <button ion-item (click)="openPage()">
+      Notifications
+    </button>
+  </ion-list>
+
+</ion-content>
