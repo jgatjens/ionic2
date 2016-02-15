@@ -23,129 +23,55 @@
     <div [ngSwitch]="hash">
       <ion-list *ngSwitchWhen="'my'">
         <!-- example card jairo -->
-        <ion-refresher
+         <ion-refresher
               pullingIcon="refresh"
-              pullingText="asdasd asdas"
               refreshingIcon="refresh"
-              (starting)="doStarting()"
               (refresh)="doRefresh($event, refresher)"
               (pulling)="doPulling($event, amt)">
         </ion-refresher>
 
-        <ion-card>
+        <ion-card *ngFor="#item of items">
           <ion-item>
             <ion-avatar item-left>
-              <img src="https://avatars3.githubusercontent.com/u/1598461?v=3&s=460">
+              <img src="{{item.username.picture}}">
             </ion-avatar>
-            <h2>Jairo Gätjens</h2>
-            <p>November 5, 2015</p>
-            <ion-badge item-right>$36</ion-badge>
+            <h2>{{item.username.fullname}}</h2>
+            <p>{{item.product.date}}</p>
+            <ion-badge item-right>{{item.product.price}}</ion-badge>
           </ion-item>
 
-          <img src="https://images-na.ssl-images-amazon.com/images/I/71ewySR5fvL._UL1500_.jpg">
+          <img src="{{item.product.picture}}">
 
           <ion-card-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>{{item.product.description}}</p>
           </ion-card-content>
 
           <ion-item>
             <button primary clear item-left>
               <ion-icon name="ionic"></ion-icon>
-              <div>10</div>
+              <div>{{item.product.remerch}}</div>
             </button>
             <button primary clear item-left>
               <ion-icon name="ios-heart"></ion-icon>
-              <div>35</div>
+              <div>{{item.product.likes}}</div>
             </button>
             <button primary clear item-left>
               <ion-icon name="bookmark"></ion-icon>
-              <div>35</div>
+              <div>{{item.product.bookmark}}</div>
             </button>
             <ion-note item-right>
-              11h ago
+              {{item.product.timeago}}
             </ion-note>
           </ion-item>
         </ion-card>
 
-        <!-- example card hangar -->
+        <!--
         <ion-card>
-          <ion-item>
-            <ion-avatar item-left>
-              <img src="https://avatars3.githubusercontent.com/u/3650101?v=3&s=200">
-            </ion-avatar>
-            <h2>Hangar</h2>
-            <p>December 10, 2015</p>
-            <ion-badge item-right>$12</ion-badge>
-          </ion-item>
-
-          <img src="http://ionicframework.com/dist/preview-app/www/img/nin-live.png">
-
-          <ion-card-content>
-          <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-          </ion-card-content>
-
-          <ion-item>
-            <button primary clear item-left>
-              <ion-icon name="ionic"></ion-icon>
-              <div>10</div>
-            </button>
-            <button primary clear item-left>
-              <ion-icon name="ios-heart"></ion-icon>
-              <div>35</div>
-            </button>
-            <button primary clear item-left>
-              <ion-icon name="bookmark"></ion-icon>
-              <div>35</div>
-            </button>
-            <ion-note item-right>
-              11h ago
-            </ion-note>
-          </ion-item>
-        </ion-card>
-
-        <!-- example card jairo -->
-        <ion-card>
-          <ion-item>
-            <ion-avatar item-left>
-              <img src="https://avatars2.githubusercontent.com/u/1964040?v=3&s=460">
-            </ion-avatar>
-            <h2>Andres Gätjens</h2>
-            <p>November 22, 2015</p>
-            <ion-badge item-right>$26</ion-badge>
-          </ion-item>
-
-          <img src="https://images-na.ssl-images-amazon.com/images/I/71ewySR5fvL._UL1500_.jpg">
-
-          <ion-card-content>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-          </ion-card-content>
-
-          <ion-item>
-            <button primary clear item-left>
-              <ion-icon name="ionic"></ion-icon>
-              <div>10</div>
-            </button>
-            <button primary clear item-left>
-              <ion-icon name="ios-heart"></ion-icon>
-              <div>35</div>
-            </button>
-            <button primary clear item-left>
-              <ion-icon name="bookmark"></ion-icon>
-              <div>35</div>
-            </button>
-            <ion-note item-right>
-              11h ago
-            </ion-note>
-          </ion-item>
-        </ion-card>
-
-        <!-- <ion-card>
           <ion-item class="item-center">
             <ion-icon refresh-icon name="refresh"></ion-icon>
           </ion-item>
-        </ion-card> -->
+        </ion-card>
+        -->
       </ion-list>
 
       <ion-list *ngSwitchWhen="'popular'">
