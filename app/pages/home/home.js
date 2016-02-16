@@ -70,8 +70,8 @@ export class HomePage {
     setTimeout(() => {
       console.debug('Pull to refresh complete!', refresher);
       refresher.complete();
-      const number = this.getRandomArbitrary(1, this.items.length);
-      this.items.unshift(this.items[number]);
+      // const number = this.getRandomArbitrary(1, this.items.length);
+      // this.items.unshift(this.items[number]);
 
     })
   }

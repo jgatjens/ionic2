@@ -1,0 +1,15 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Upload Image
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class="upload-page">
+  <button large full (click)="openCamera()">>
+    Take photo
+    <ion-icon name="camera"></ion-icon>
+
+  </button>
+  <video id="camera-stream" width="100%" autoplay></video>
+</ion-content>

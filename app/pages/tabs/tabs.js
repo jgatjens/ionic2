@@ -1,7 +1,7 @@
 import {Page} from 'ionic/ionic';
 import {NotificationPage} from '../notification/notification';
 import {HomePage} from '../home/home';
-import {Page3} from '../page3/page3';
+import {UploadPage} from '../upload/upload';
 import {SettingsPage} from '../settings/settings';
 
 
@@ -14,7 +14,7 @@ export class TabsPage {
     // should be each tab's root Page
     this.tabHomeRoot = HomePage;
     this.tabNotificationRoot = NotificationPage;
-    this.tab3Root = Page3;
+    this.tabUploadRoot = UploadPage;
     this.tabSettingsRoot = SettingsPage;
   }
 }
